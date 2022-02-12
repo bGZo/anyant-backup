@@ -722,3 +722,4 @@
 | 🖼一个开源的 #LaTeX 示例库：annotated_latex_equations，教你如何使用 Tikz 创建彩色的 LaTeX 注释，让论文变得更为简洁与美观 | https://t.me/tieliu/16403 | https://rss.anyant.com/story?feed=45uu5cc6&offset=948 |
 | 中国最卷的公务员考试，挤满清北毕业生 ​ | https://t.me/tieliu/16404 | https://rss.anyant.com/story?feed=45uu5cc6&offset=949 |
 | #讨论互联网的最终目的，是让关系学见鬼去。 | https://t.me/weekly_books/1414 | https://rss.anyant.com/story?feed=45uu5cck&offset=100 |
+| 科技爱好者周刊（第 194 期）：悲观者正确，乐观者成功 | http://www.ruanyifeng.com/blog/2022/02/weekly-issue-194.html | https://rss.anyant.com/story?feed=45uu4umx&offset=91 |
