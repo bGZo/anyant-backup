@@ -1,0 +1,41 @@
+name: anyant-backup
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  schedule:
+    - cron:  '1 16 * * 7'
+
+jobs:
+  sync:
+    name: Build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: Set up Python
+        uses: actions/setup-python@v1
+        with:
+          python-version: 3.8
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+        if: steps.pip-cache.outputs.cache-hit != 'true'
+      
+      - name: Run Script
+        run: |
+          python3 anyant-backup.py ${{ secrets.G_A }} -p ${{ secrets.G_P }}
+      - name: Commit and push
+        uses: github-actions-x/commit@v2.6
+        with:
+          github-token: ${{ secrets.G_T }}
+          commit-message: "Update anyant"
+          files: .
+          rebase: 'true'
+          name: bGZoCg
+          email: bgzocg@outlook.com
