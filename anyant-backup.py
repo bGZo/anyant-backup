@@ -19,7 +19,6 @@ def init(loginUrl, data):
         config = json.load(f)
         header = config['header']
         f.close()
-
     else:
         print('config not exists!')
 
@@ -42,14 +41,7 @@ def init(loginUrl, data):
         c = requests.utils.dict_from_cookiejar(r.cookies)
         header['cookie'] = 'csrftoken='+ c['csrftoken'] +'; sessionid='+ c['sessionid']
         header['x-csrftoken'] = c['csrftoken']
-        backup={
-            'header': header
-            #'data': data
-        }
-        # f = open('./data/config.json', 'w')
-        # f.write(json.dumps(backup, ensure_ascii=False)) 
-        # NOTE: ' to ", via:https://wxnacy.com/2020/05/01/python-print-dict-double-quotation-marks/
-        # f.close()
+        backup={'header': header}
         print('config.json created.')
     return header
 
@@ -80,9 +72,9 @@ def update_index(file):
 
     f=open('./index.md', 'a')
     for i in favs:
-        tmp = '| ' + i['title'] + ' | ' + i['link'] + ' | ' + \
+        tmp = '| ' + i['title'] + ' | [jmp](' + i['link'] + ') | [jmp](' + \
         'https://rss.anyant.com/story?feed=' + \
-        i['feed']['id'] + '&offset=' + str(i['offset']) + ' |\n'
+        i['feed']['id'] + '&offset=' + str(i['offset']) + ') |'
         f.write(tmp)
     f.close()
 
