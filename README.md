@@ -1,4 +1,4 @@
-## Person Collections
+## Personal Collections
 
 Using Github Actions, fetch all star in [anyant](rss.anyant.com) web rss reader to backup index.
 
