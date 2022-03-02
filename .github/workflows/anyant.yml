@@ -2,10 +2,6 @@ name: anyant-backup
 
 on:
   workflow_dispatch:
-  push:
-    branches: [ main ]
-  pull_request:
-    branches: [ main ]
   schedule:
     - cron:  '1 16 * * 6'
 
