@@ -74,7 +74,7 @@ def update_index(file):
     for i in favs:
         tmp = '| ' + i['title'] + ' | [jmp](' + i['link'] + ') | [jmp](' + \
         'https://rss.anyant.com/story?feed=' + \
-        i['feed']['id'] + '&offset=' + str(i['offset']) + ') |'
+        i['feed']['id'] + '&offset=' + str(i['offset']) + ') |\n'
         f.write(tmp)
     f.close()
 
