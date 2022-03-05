@@ -846,3 +846,4 @@
 | 常人最可悲的莫过于，口中重复着他者的话语，却完成了“自我感动”的循环 | [jmp](https://t.me/vitamineEpodcast/1338) | [jmp](https://rss.anyant.com/story?feed=45uu5ccs&offset=251) |
 | 感觉有给男权主义者分个类的必要性了，举个例子： 田园男权主义：指在广大乡村的传统的“传宗接代”意识形态，为了这个意识形态可以付彩礼，买媳妇，结婚是为了... | [jmp](https://t.me/vitamineEpodcast/1361) | [jmp](https://rss.anyant.com/story?feed=45uu5ccs&offset=274) |
 | 简中互联网媒介在这次的事件中真正让人体会到了，什么叫做意识形态的大粪坑。各种各样的令人恶心的意识形态借着“大他者”的话语开始了斗争和缝合，我本来打算好... | [jmp](https://t.me/vitamineEpodcast/1376) | [jmp](https://rss.anyant.com/story?feed=45uu5ccs&offset=289) |
+| 賈選凝專欄：簡體中文互聯網的網民為何支持普京？ | [jmp](https://sehseh.substack.com/p/14a) | [jmp](https://rss.anyant.com/story?feed=45uu5d1z&offset=240) |
