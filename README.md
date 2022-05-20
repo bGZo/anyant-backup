@@ -1,17 +1,54 @@
-## Personal Collections
+# Anyant Backup
 
-Using Github Actions, fetch all star in [anyant](rss.anyant.com) web rss reader to backup index.
+Anyant, unfav/unstar all and storing your data/cookie local.
 
-## Bullshit between me & rss 
+蚁阅, 取消所有收藏并备份 json+cookie 文件.
 
-人所创之一切皆是自我精神的无限展开, 我总喜欢说说缘起, 然后荡开来去.
+## Usage
 
-最早从电视的外文广告碟片中看过 RSS 这个图标, 当时甚至连这是个订阅按钮都不知道.
+### Github Actions
 
-![rss](https://user-images.githubusercontent.com/57313137/156362039-1f3d31d5-f352-4bd4-bb3a-d108869186c5.svg)
+Fork and try to config `G_A` & `G_P` & `G_T` in `settings>secerts>actions`. Then it would works weekly well. 😁 
 
-直到大学赶上疫情的那段时间随便下了个国产 rss 阅读器, 才稀里糊涂的学会如何使用, 渐渐开始融入, 渗透进自己的生活, 这之间隔了有十多年, 技术日新月异, 网站也荣枯摇摆, 随着国内内容环境的日渐恶劣, 自由主义的沃土将无限坍缩, 已经容不下一点点 Hacker 文化存于市场了, 越来越多的网站关闭 rss, 只有一个原因, 不赚钱. 
+Remember to remove my backup file in `/data/` path.
 
-所以我们必然怀念从前, 即使从前已成历史. 
+### Local
 
-`RSS3.0` 继 `Web3.0 `接踵而至, 我难以预估其愿景, 我只知道, 如果你的网站支持 `RSS`, 我非常欣赏你的无私; 如果你因为庞大的死用户流量而关闭 `RSS`, 那也实属可以理解, 即使我不再访问这个网站, 因为面对不同前端配色, 逻辑和显示的冲击, 不如让我去死.
+2 ways works:
+
+- Clone repo.
+- [Recommand] Download `anyant-backup-local.py` & `requirement.txt` file in a new directory. Then try with helpful prompt: 
+
+```shell
+$python3 anyant-backup-local.py -h
+usage: anyant-backup.py [-h] [-p PASSWORD] account
+
+Anyant Script.
+
+positional arguments:
+  account               input your account
+
+optional arguments:
+  -h, --help            show this help message and exit
+  -p PASSWORD, -password PASSWORD
+                        password                                       
+```
+
+![image](https://user-images.githubusercontent.com/57313137/169489050-11913d93-5f75-437f-9690-ec1b66ca1c8c.png)
+
+
+## Notices Your Cookies!
+
+Check followings code whether comment out or not.
+
+If not, Remember remove `config.json`, someone could us cookie do anything. 
+
+Notice don't push cookie on network.
+
+```python
+f = open('./data/config.json', 'w')
+f.write(json.dumps(backup, ensure_ascii=False)) 
+# NOTE: ' to ", via:https://wxnacy.com/2020/05/01/python-print-dict-double-quotation-marks/
+f.close()
+print('config.json created.')
+```
